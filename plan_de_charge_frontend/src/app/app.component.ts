@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet></router-outlet>
+    <div class="section-page">
+      <app-header></app-header>
+      <div class="section-main">
+        <app-navbar></app-navbar>
+        <div class="section-content">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
   `,
-  styles: []
+  styleUrls: ["../styles.scss"],
 })
-export class AppComponent {
-  title = 'plan_de_charge_frontend';
-}
+export class AppComponent {}

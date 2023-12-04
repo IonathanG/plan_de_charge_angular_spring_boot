@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles and imports */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Ubuntu", "sans-serif";
+  // background-color: ${({ theme }) => theme.background_MainSection};
+}
+
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.section-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background-color: bisque;
+  font-family: "Ubuntu", "sans-serif";
+  transition: 0.3s ease;
+
+  .section-main {
+    // very-wide screen case
+    // max-width: 1440px;
+
+    // margin for Top Header height
+    margin-top: 70px;
+    width: 100%;
+    background-color: rgb(132, 194, 194);
+    transition: 0.3s ease;
+
+    .section-content {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+
+      // margin for side Navbar
+      margin-left: 250px;
+      padding: 15px;
+      transition: 0.3s ease;
+      background-color: rgb(243, 183, 193) !important;
+
+      // @media ${device.navbarBreakpoint} {
+      //   margin-left: 0px;
+      // }
+    }
+  }
+}
