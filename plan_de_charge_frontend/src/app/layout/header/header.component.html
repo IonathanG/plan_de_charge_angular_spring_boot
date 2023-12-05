@@ -1,11 +1,20 @@
 <div class="header-container">
   <!-- Left side Header => Logo + Input Search -->
   <div class="header-container__left">
-    left
-
+    <!-- <app-header-hamburger></app-header-hamburger> -->
     <app-header-logo></app-header-logo>
   </div>
 
-  <!-- Right side Header => New Ticket + Notifications + Settings + Logout -->
-  <div class="header-container__right">right</div>
+  <!-- Right side Header => New Project + Notifications + Settings + Logout -->
+  <div class="header-container__right">
+    <app-button-main
+      label="Nouveau Projet"
+      [disabled]="false"
+      styleClass="primary-button"
+      (buttonClick)="navigateToNewProject()"
+    ></app-button-main>
+    <app-header-notification></app-header-notification>
+    <app-header-settings></app-header-settings>
+    <app-header-logout></app-header-logout>
+  </div>
 </div>

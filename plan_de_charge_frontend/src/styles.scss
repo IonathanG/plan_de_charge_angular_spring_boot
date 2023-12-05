@@ -1,4 +1,6 @@
 /* Global Styles and imports */
+@import "./styles/variables";
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -13,7 +15,7 @@ html {
 body {
   min-height: 100vh;
   font-family: "Ubuntu", "sans-serif";
-  // background-color: ${({ theme }) => theme.background_MainSection};
+  background-color: $background-secondary;
 }
 
 body,
@@ -51,9 +53,10 @@ img {
   min-height: 100vh;
   width: 100%;
 
-  background-color: bisque;
   font-family: "Ubuntu", "sans-serif";
   transition: 0.3s ease;
+  background-color: $background-secondary;
+  color: $color-primary;
 
   .section-main {
     // very-wide screen case
@@ -62,7 +65,7 @@ img {
     // margin for Top Header height
     margin-top: 70px;
     width: 100%;
-    background-color: rgb(132, 194, 194);
+    background-color: $background-secondary;
     transition: 0.3s ease;
 
     .section-content {
@@ -74,11 +77,15 @@ img {
       margin-left: 250px;
       padding: 15px;
       transition: 0.3s ease;
-      background-color: rgb(243, 183, 193) !important;
+      // background-color: rgb(243, 183, 193) !important;
 
       // @media ${device.navbarBreakpoint} {
       //   margin-left: 0px;
       // }
     }
   }
+}
+
+.icon {
+  cursor: pointer;
 }

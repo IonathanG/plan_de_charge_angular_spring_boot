@@ -1,3 +1,5 @@
+@import "../../../styles/variables";
+
 .header-container {
   position: fixed;
   top: 0;
@@ -10,9 +12,9 @@
   align-items: center;
   justify-content: space-between;
 
-  //   color: ${({ theme }) => theme.color_Font_Light};
-  //   background-color: ${({ theme }) => theme.background_Header};
-  //   border-bottom: 1px solid ${({ theme }) => theme.boxShadow_Navbar};
+  color: $color-secondary;
+  background-color: $background-primary;
+  border-bottom: 1px solid $boxShadow-primary;
   transition: 0.3s ease;
   z-index: 20;
 

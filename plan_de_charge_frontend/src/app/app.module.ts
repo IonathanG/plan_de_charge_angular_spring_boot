@@ -7,9 +7,9 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FeatureModule } from "./features/features.module";
 import { PageNotFoundComponent } from "./shared/page-not-found/page-not-found.component";
-import { HeaderComponent } from "./layout/header/header.component";
 import { NavbarComponent } from "./layout/navbar/navbar.component";
-import { HeaderModule } from "./layout/header/header-logo/header-logo/header.module";
+import { HeaderModule } from "./layout/header/header.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, NavbarComponent],
@@ -17,9 +17,10 @@ import { HeaderModule } from "./layout/header/header-logo/header-logo/header.mod
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    HeaderModule,
+    HeaderModule, // Header Module
     FeatureModule, // All Sub Routes for Pages
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

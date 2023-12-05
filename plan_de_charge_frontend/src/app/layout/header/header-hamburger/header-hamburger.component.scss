@@ -1,0 +1,59 @@
+.header-hamburger-container {
+  display: none;
+  cursor: pointer;
+
+  // Hamburger menu slides in
+  // @media ${device.navbarBreakpoint} {
+  //   display: block;
+  // }
+
+  // width of each Slice
+  div:nth-child(1) {
+    width: 25px;
+  }
+
+  div:nth-child(2) {
+    width: 22px;
+  }
+
+  div:nth-child(3) {
+    width: 19px;
+  }
+
+  &:hover {
+    div:nth-child(2),
+    div:nth-child(3) {
+      width: 25px;
+    }
+  }
+
+  .slice {
+    display: block;
+    height: 2.5px;
+
+    margin: 5px 0;
+    transition: all 0.5s ease;
+
+    // background-color: ${(props) =>
+    //   props.showMenu
+    //     ? props.theme.color_active_Hamburger
+    //     : props.theme.color_Hamburger};
+    background-color: black;
+  }
+
+  .top-slice {
+    // transform: ${(props) =>
+    //   props.showMenu && "translateY(7.5px) rotateZ(225deg)"};
+    // width: ${(props) => props.showMenu && "25px"} !important;
+  }
+
+  .middle-slice {
+    // width: ${(props) => props.showMenu && "0px"} !important;
+  }
+
+  .bottom-slice {
+    // transform: ${(props) =>
+    //   props.showMenu && "translateY(-7.5px) rotateZ(-225deg)"};
+    // width: ${(props) => props.showMenu && "25px"} !important;
+  }
+}
