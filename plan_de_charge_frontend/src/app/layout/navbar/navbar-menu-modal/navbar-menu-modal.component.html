@@ -1,0 +1,33 @@
+<div class="navbar-menu-modal-container">
+  <div class="navbar-menu-modal-header">
+    <div
+      [ngClass]="{
+        'navbar-menu-modal navbar-menu-modal-navigation': true,
+        'navbar-menu-modal-navigation-active': showNavigation,
+      }"
+      (click)="toggleView(true)"
+    >
+      Menu
+    </div>
+    <div
+      [ngClass]="{
+        'navbar-menu-modal navbar-menu-modal-settings': true,
+        'navbar-menu-modal-settings-active': !showNavigation,
+      }"
+      (click)="toggleView(false)"
+    >
+      <div class="icon">
+        <mat-icon style="color: rgb(90, 90, 90)">settings</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- Switch to Navigation or Theme View -->
+  <div *ngIf="showNavigation">
+    <app-navbar-navigation-menu></app-navbar-navigation-menu>
+  </div>
+  <div *ngIf="!showNavigation" class="navbar-menu-modal-switch-theme">
+    <span>Choose Mode</span>
+    Switch Theme
+  </div>
+</div>

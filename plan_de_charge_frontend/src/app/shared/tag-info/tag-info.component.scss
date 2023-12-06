@@ -1,0 +1,43 @@
+@import "../../../styles/variables";
+
+.tag-info-container {
+  width: fit-content;
+
+  border-radius: 4px;
+  border: 1px solid;
+  padding: 4px 8px;
+
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cyan-tag-info {
+  color: $theme-cyan;
+  border-color: $theme-cyan;
+}
+
+.gray-tag-info {
+  color: $theme-gray;
+  border-color: $theme-gray;
+}
+
+.red-tag-info {
+  color: $theme-red;
+  border-color: $theme-red;
+}
+
+.light-blue-tag-info {
+  color: $theme-light-blue;
+  border-color: $theme-light-blue;
+}
+
+.green-tag-info {
+  color: $theme-green;
+  border-color: $theme-gray;
+}
+
+.yellow-tag-info {
+  color: $theme-yellow;
+  border-color: $theme-yellow;
+}

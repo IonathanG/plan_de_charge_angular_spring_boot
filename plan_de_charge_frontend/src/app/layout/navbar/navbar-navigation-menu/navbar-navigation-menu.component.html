@@ -1,0 +1,16 @@
+<div class="navbar-navigation-menu-container">
+  <ul class="navbar-navigation-menu-item-container">
+    <li
+      *ngFor="let item of menuNav"
+      class="item"
+      [ngClass]="{ 'item-active': item.id === selectedMenuItem }"
+      (click)="navigateToMenuItem(item.id, item.link)"
+    >
+      <!-- Simple Navigation Links -->
+      <img [src]="item.src" class="item-icon" />
+      <div class="item-name">
+        {{ item.name }}
+      </div>
+    </li>
+  </ul>
+</div>

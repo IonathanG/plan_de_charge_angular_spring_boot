@@ -1,5 +1,5 @@
 // THEMES AND COLORS
-
+// -----------------------------------------------------------
 $background-primary: rgb(255, 255, 255);
 $background-secondary: rgb(244, 247, 246);
 
@@ -8,5 +8,27 @@ $color-secondary: rgb(90, 90, 90);
 
 $boxShadow-primary: rgba(136, 136, 136, 0.165);
 
+$border-color-primary: rgb(222, 226, 230);
+
+// THEMES
 $theme-blue: rgb(0, 123, 254);
 $theme-blue-hover: rgb(1, 105, 217);
+
+$theme-cyan: rgb(73, 197, 182);
+
+$theme-gray: rgb(156, 156, 156);
+
+$theme-red: rgb(220, 52, 68);
+
+$theme-light-blue: rgb(92, 142, 212);
+
+$theme-green: rgb(39, 167, 68);
+
+$theme-yellow: rgb(244, 173, 2);
+
+// NAVBAR
+$olor-navItem: rgb(23, 25, 28);
+$color-navItem-active: rgb(90, 90, 90);
+$background-navItem-active: rgb(241, 241, 241);
+$color-subNavItem: rgb(119, 119, 119);
+$boxShadow-navbar: rgba(136, 136, 136, 0.165);
