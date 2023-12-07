@@ -7,6 +7,7 @@ import { TagInfoComponent } from "../../shared/tag-info/tag-info.component";
 import { MatIconModule } from "@angular/material/icon";
 import { NavbarNavigationMenuComponent } from "./navbar-navigation-menu/navbar-navigation-menu.component";
 import { MenuService } from "./menu.service";
+import { RouteService } from "../../core/services/route-service.service";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,6 @@ import { MenuService } from "./menu.service";
   ],
   imports: [CommonModule, MatIconModule],
   exports: [NavbarComponent],
-  providers: [MenuService],
+  providers: [MenuService, RouteService],
 })
 export class NavbarModule {}

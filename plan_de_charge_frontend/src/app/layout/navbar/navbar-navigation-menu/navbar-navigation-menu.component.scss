@@ -9,41 +9,116 @@
   .navbar-navigation-menu-item-container {
     cursor: pointer;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 
     // Simple Navigation Link
     .item {
-      display: flex;
-      align-items: center;
-      padding: 12px 20px;
-      gap: 20px;
+      .item-container {
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        gap: 20px;
 
-      height: 49px;
-      color: $olor_navItem;
-      transition: 0.4s ease;
+        height: 49px;
+        color: $olor_navItem;
+        transition: 0.3s ease;
 
-      &:hover {
-        background-color: $background-navItem-active;
-      }
+        &:hover {
+          background-color: $background-navItem-active;
+        }
 
-      .item-icon {
-        width: 16px;
-        height: 16px;
+        .item-icon {
+          width: 16px;
+          height: 16px;
 
-        display: grid;
-        place-items: center;
+          display: grid;
+          place-items: center;
 
-        opacity: 0.8;
-        color: $theme-cyan;
-      }
+          opacity: 0.8;
+          color: $theme-cyan;
+        }
 
-      .item-name {
-        font-size: 15px;
+        .item-name {
+          font-size: 15px;
+        }
       }
     }
 
     .item-active {
       background-color: $background-navItem-active;
       border-left: 5px solid $theme-cyan;
+    }
+
+    // Dropdown Navigation Links
+    .item-dropdown-container {
+      height: 49px;
+      transition: 0.4s ease;
+
+      .item-container {
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        gap: 20px;
+
+        height: 49px;
+        color: $olor_navItem;
+        transition: 0.3s ease;
+      }
+
+      // Sub Navigation Links
+      .sub-item-container {
+        overflow: hidden;
+        height: 0px;
+        transition: 0.2s ease;
+
+        position: absolute;
+        opacity: 0;
+
+        .sub-item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 12px 20px;
+          gap: 20px;
+
+          height: 49px;
+          color: $olor_navItem;
+          transition: 0.3s ease;
+          margin-left: 10px;
+
+          .item-icon {
+            width: 16px;
+            height: 16px;
+
+            display: grid;
+            place-items: center;
+
+            opacity: 0.8;
+            color: $theme-cyan;
+          }
+
+          .item-name {
+            font-size: 13px !important;
+            color: $color-secondary;
+          }
+
+          &:hover {
+            background-color: $background-navItem-active;
+          }
+        }
+      }
+
+      .sub-item-container-active {
+        height: 100%;
+        opacity: 1;
+        position: relative;
+      }
+    }
+
+    .item-dropdown-container-active {
+      height: 100%;
     }
   }
 }

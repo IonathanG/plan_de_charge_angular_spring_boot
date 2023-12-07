@@ -3,13 +3,53 @@
     <li
       *ngFor="let item of menuNav"
       class="item"
-      [ngClass]="{ 'item-active': item.id === selectedMenuItem }"
+      [ngClass]="{
+        'item-active': selectedMenuItem.includes(item.id) && item.id !== 2
+      }"
       (click)="navigateToMenuItem(item.id, item.link)"
     >
       <!-- Simple Navigation Links -->
-      <img [src]="item.src" class="item-icon" />
-      <div class="item-name">
-        {{ item.name }}
+      <div *ngIf="!item.sub_menu" class="item-container">
+        <img [src]="item.src" class="item-icon" />
+        <div class="item-name">
+          {{ item.name }}
+        </div>
+      </div>
+
+      <!-- Dropdown Navigation Links -->
+      <div
+        *ngIf="item.sub_menu"
+        class="item-dropdown-container"
+        [ngClass]="{
+          'item-dropdown-container-active': selectedMenuItem.includes(item.id)
+        }"
+      >
+        <div class="item-container">
+          <img [src]="item.src" class="item-icon" />
+          <div class="item-name">
+            {{ item.name }}
+          </div>
+        </div>
+
+        <!-- Sub Navigation Links -->
+        <ul
+          class="sub-item-container"
+          [ngClass]="{
+            'sub-item-container-active': selectedMenuItem.includes(item.id)
+          }"
+        >
+          <li
+            *ngFor="let sub_item of item.sub_menu"
+            (click)="navigateToSubMenuItem(sub_item.link)"
+          >
+            <div class="sub-item">
+              <img [src]="sub_item.src" class="item-icon" />
+              <div class="item-name">
+                {{ sub_item.name }}
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </li>
   </ul>
