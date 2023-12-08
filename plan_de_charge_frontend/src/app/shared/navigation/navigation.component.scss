@@ -1,0 +1,36 @@
+@import "../../../styles/variables";
+
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  .navigation-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 500;
+
+    .navigation-arrowIcon {
+      cursor: pointer;
+      transform: rotate(180deg) scale(0.8);
+      transition: 0.3s ease;
+    }
+  }
+
+  .navigation-bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+
+    .navigation-homeIcon {
+      cursor: pointer;
+      transform: scale(0.8);
+      transition: 0.3s ease;
+    }
+  }
+}

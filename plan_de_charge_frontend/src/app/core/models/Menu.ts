@@ -3,6 +3,7 @@ export type MenuItem =
   | "/graphs"
   | "/projects-container"
   | "/projects"
+  | "/projects/list"
   | "/clients"
   | "/users"
   | "/frameworks"

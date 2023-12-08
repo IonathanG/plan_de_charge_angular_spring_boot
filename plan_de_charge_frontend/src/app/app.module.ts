@@ -10,6 +10,8 @@ import { PageNotFoundComponent } from "./shared/page-not-found/page-not-found.co
 import { HeaderModule } from "./layout/header/header.module";
 import { NavbarModule } from "./layout/navbar/navbar.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatTableModule } from "@angular/material/table";
+import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
@@ -20,6 +22,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     HeaderModule, // Header Module
     NavbarModule, // Navbar Module
     FeatureModule, // All Sub Routes for Pages
+    MatTableModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],

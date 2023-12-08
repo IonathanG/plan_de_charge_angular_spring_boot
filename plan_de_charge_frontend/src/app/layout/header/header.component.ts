@@ -10,6 +10,6 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
   navigateToNewProject(): void {
-    this.router.navigate(["/projects/new"]);
+    this.router.navigate(["/project/add"]);
   }
 }

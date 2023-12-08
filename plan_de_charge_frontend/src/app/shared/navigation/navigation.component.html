@@ -1,0 +1,15 @@
+<div class="navigation-container">
+  <div class="navigation-top">
+    <div class="navigation-arrowIcon" (click)="navigateToPreviousPage()">
+      <mat-icon style="color: rgb(73, 197, 182)">arrow_forward</mat-icon>
+    </div>
+    {{ label }}
+  </div>
+  <div class="navigation-bottom">
+    <div class="navigation-homeIcon" (click)="navigateToHome()">
+      <mat-icon style="color: rgb(73, 197, 182)">home</mat-icon>
+    </div>
+    <span>/</span>
+    {{ label }}
+  </div>
+</div>

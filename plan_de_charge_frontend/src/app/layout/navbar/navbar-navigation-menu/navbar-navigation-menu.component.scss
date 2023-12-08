@@ -65,6 +65,12 @@
         height: 49px;
         color: $olor_navItem;
         transition: 0.3s ease;
+
+        .item-arrowIcon {
+          margin-left: 85px;
+          transform: scale(0.5) rotate(180deg);
+          transition: 0.2s ease-in-out;
+        }
       }
 
       // Sub Navigation Links
@@ -86,7 +92,7 @@
           height: 49px;
           color: $olor_navItem;
           transition: 0.3s ease;
-          margin-left: 10px;
+          margin-left: 20px;
 
           .item-icon {
             width: 16px;
@@ -119,6 +125,11 @@
 
     .item-dropdown-container-active {
       height: 100%;
+
+      .item-arrowIcon {
+        transform: scale(0.5) rotate(90deg) !important;
+        transition: 0.2s ease-in-out;
+      }
     }
   }
 }
